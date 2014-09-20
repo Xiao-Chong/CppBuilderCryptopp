@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{548E7F77-EA72-40E6-85D2-BD86210974A1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="cryptlib_bds.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SimpleTest.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="cryptest_bds.cbproj">
+            <Dependencies>cryptlib_bds.cbproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="cryptlib_bds">
+        <MSBuild Projects="cryptlib_bds.cbproj"/>
+    </Target>
+    <Target Name="cryptlib_bds:Clean">
+        <MSBuild Projects="cryptlib_bds.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cryptlib_bds:Make">
+        <MSBuild Projects="cryptlib_bds.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleTest">
+        <MSBuild Projects="SimpleTest.cbproj"/>
+    </Target>
+    <Target Name="SimpleTest:Clean">
+        <MSBuild Projects="SimpleTest.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleTest:Make">
+        <MSBuild Projects="SimpleTest.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="cryptest_bds" DependsOnTargets="cryptlib_bds">
+        <MSBuild Projects="cryptest_bds.cbproj"/>
+    </Target>
+    <Target Name="cryptest_bds:Clean" DependsOnTargets="cryptlib_bds:Clean">
+        <MSBuild Projects="cryptest_bds.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cryptest_bds:Make" DependsOnTargets="cryptlib_bds:Make">
+        <MSBuild Projects="cryptest_bds.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="cryptlib_bds;SimpleTest;cryptest_bds"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="cryptlib_bds:Clean;SimpleTest:Clean;cryptest_bds:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="cryptlib_bds:Make;SimpleTest:Make;cryptest_bds:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
