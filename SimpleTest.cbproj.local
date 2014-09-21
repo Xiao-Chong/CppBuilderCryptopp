@@ -3,12 +3,12 @@
 	<Transactions>
     <Transaction>2014/09/20 10:22:14.000.010,=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
     <Transaction>2014/09/20 10:22:14.000.573,=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.h</Transaction>
-    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.fmx</Transaction>
-    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.cpp</Transaction>
-    <Transaction>2014/09/20 10:22:42.000.701,C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1PCH1.h</Transaction>
-    <Transaction>2014/09/20 10:22:46.000.210,C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1.cbproj</Transaction>
-    <Transaction>2014/09/20 11:38:49.000.479,C:\Users\Hugh\Desktop\cryptopp562_WIN32\SimpleTestPCH1.h=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1PCH1.h</Transaction>
-    <Transaction>2014/09/20 11:38:49.000.575,C:\Users\Hugh\Desktop\cryptopp562_WIN32\SimpleTest.cbproj=C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1.cbproj</Transaction>
+    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.h=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.cpp=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2014/09/20 10:22:39.000.302,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Unit1.fmx=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2014/09/20 10:22:42.000.701,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1PCH1.h=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2014/09/20 10:22:46.000.210,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1.cbproj=C:\Users\Hugh\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2014/09/20 11:38:49.000.479,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1PCH1.h=C:\Users\Hugh\Desktop\cryptopp562_WIN32\SimpleTestPCH1.h</Transaction>
+    <Transaction>2014/09/20 11:38:49.000.575,C:\Users\Hugh\Desktop\cryptopp562_WIN32\Project1.cbproj=C:\Users\Hugh\Desktop\cryptopp562_WIN32\SimpleTest.cbproj</Transaction>
   </Transactions>
 </BorlandProject>
