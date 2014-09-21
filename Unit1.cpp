@@ -8,6 +8,7 @@
 #include "modes.h"
 #include "aes.h"
 #include "filters.h"
+#include "osrng.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -27,12 +28,21 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
     //AES encryption uses a secret key of a variable length (128-bit, 196-bit or 256-
     //bit). This key is secretly exchanged between two parties before communication
 		//begins. DEFAULT_KEYLENGTH= 16 bytes
-		byte key[ CryptoPP::AES::DEFAULT_KEYLENGTH ], iv[ CryptoPP::AES::BLOCKSIZE ];
+		byte key[ CryptoPP::AES::DEFAULT_KEYLENGTH ] = "YourPrivateKey1"
+					, iv[ CryptoPP::AES::BLOCKSIZE ];
 
-		std::string plaintext = "Welcome to C++ Builder Delphi Taiwan G+ Community\nhttps://plus.google.com/communities/118037201839816898111";
+		CryptoPP::AutoSeededRandomPool rnd;
+		//rnd.GenerateBlock(key,CryptoPP::AES::DEFAULT_KEYLENGTH);
+		rnd.GenerateBlock(iv,CryptoPP::AES::BLOCKSIZE);
+
+		std::string plaintext =
+		"Welcome to C++ Builder Delphi Taiwan G+ Community"
+		"\nhttps://plus.google.com/communities/118037201839816898111";
+
 		std::string ciphertext;
 		std::string decryptedtext;
 
+		this->Memo1->Lines->Add("================================================");
 		this->Memo1->Lines->Add(plaintext.c_str());
 
 		CryptoPP::AES::Encryption aesEncryption(key, CryptoPP::AES::DEFAULT_KEYLENGTH);
@@ -65,5 +75,6 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 		stfDecryptor.MessageEnd();
 
 		this->Memo1->Lines->Add(decryptedtext.c_str());
+		this->Memo1->Lines->Add("");
 }
 //---------------------------------------------------------------------------
